@@ -1,0 +1,1 @@
+window.addEventListener("message",(function(o){try{const t=JSON.parse(o.data)?.mktoResponse?.data?.formId;if(void 0!==window.MktoForms2){const o=window.MktoForms2.getForm(t).getValues(),e=o?.Email||o?.email;e&&(o=>{trackEvent("form_submission","FORM",null,{email:o,form_type:"marketo",source_type:"form_submission",integration:"Marketo"})})(e)}}catch(o){}}));
