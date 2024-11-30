@@ -1,0 +1,1 @@
+window.addEventListener("message",(function(t){try{if("hsFormCallback"===t.data?.type&&"onFormSubmit"===t.data.eventName){const a=t.data.data.find((t=>"email"===t.name))?.value;a&&(t=>{trackEvent("form_submission","FORM",null,{email:t,form_type:"hubspot",source_type:"form_submission",integration:"HubSpot"})})(a)}}catch(t){}}));
